@@ -18,7 +18,7 @@ describe("renderMarkdown", () => {
       'some paragraph\n\n' +
       '* a bullet point');
     expect(html).toEqual(
-      '<h2 id="heading-2">heading 2</h2>\n' +
+      '<h2>heading 2</h2>\n' +
       '<p>some paragraph</p>\n' +
       '<ul>\n' +
       '<li>a bullet point</li>\n' +
@@ -40,7 +40,8 @@ describe("renderMarkdown", () => {
       '<p>some test</p>\n' +
       '<pre><code>code\n' +
       '  indented code\n' +
-      'more code</code></pre>\n' +
+      'more code\n' +
+      '</code></pre>\n' +
       '<p>more text</p>\n'
     );
 

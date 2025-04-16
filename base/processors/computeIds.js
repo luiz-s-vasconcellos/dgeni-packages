@@ -1,4 +1,4 @@
-const templateFn = require('lodash.template');
+const { template: templateFn } = require('lodash');
 
 /**
  * @dgProcessor computeIdsProcessor

@@ -1,6 +1,6 @@
 const path = require('canonical-path');
 const glob = require('glob');
-const templateFn = require('lodash.template');
+const { template: templateFn } = require('lodash');
 
 /**
  * @dgService templateFinder

@@ -1,4 +1,4 @@
-const marked = require('marked');
+const { marked } = require('marked');
 
 /**
  * @dgService renderMarkdown
@@ -11,10 +11,10 @@ module.exports = function renderMarkdown(trimIndentation) {
 
   // Remove the leading whitespace from the code block before it gets to the
   // markdown code render function
-  renderer.code = (code, string, language) => {
+  renderer.code = ({ text, lang, escaped }) => {
 
-    const trimmedCode = trimIndentation(code);
-    let renderedCode = marked.Renderer.prototype.code.call(renderer, trimmedCode, string, language);
+    const trimmedCode = trimIndentation(text);
+    let renderedCode = marked.Renderer.prototype.code.call(renderer, { text: trimmedCode, lang, escaped });
 
     // Bug in marked - forgets to add a final newline sometimes
     if ( !/\n$/.test(renderedCode) ) {
@@ -24,5 +24,5 @@ module.exports = function renderMarkdown(trimIndentation) {
     return renderedCode;
   };
 
-  return content => marked(content, { renderer: renderer });
+  return content => marked.parse(content, { renderer: renderer });
 };

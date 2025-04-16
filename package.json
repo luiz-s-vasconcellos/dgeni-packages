@@ -1,6 +1,6 @@
 {
   "name": "dgeni-packages",
-  "version": "0.30.0",
+  "version": "0.30.1",
   "description": "A collection of dgeni packages for generating documentation from source code",
   "publishConfig": {
     "registry": "https://wombat-dressing-room.appspot.com"
@@ -56,28 +56,29 @@
     "canonical-path": "^1.0.0",
     "catharsis": "^0.8.1",
     "change-case": "3.0.0",
-    "dgeni": "^0.4.14",
+    "dgeni": "^0.4.0",
     "espree": "^7.3.1",
     "estraverse": "^4.1.0",
     "glob": "^7.0.5",
     "htmlencode": "^0.0.4",
     "htmlparser2": "^3.7.3",
     "lodash.difference": "^4.5.0",
-    "lodash.template": "^4.5.0",
-    "marked": "^0.7.0",
+    "marked": "^15.0.0",
     "minimatch": "^3.0.2",
     "nunjucks": "^3.2.2",
     "rehype": "^8.0.0",
     "semver": "^5.2.0",
     "spdx-license-list": "^2.1.0",
-    "typescript": "~4.5.4",
+    "typescript": "~4.8.0",
     "urlencode": "^1.1.0"
   },
   "devDependencies": {
     "@types/glob": "^5.0.30",
     "@types/jasmine": "^2.5.51",
+    "@types/lodash": "4.17.5",
     "@types/lodash.difference": "^4.5.6",
     "@types/node": "^14.14.20",
+    "@types/vfile-message": "^2.0.0",
     "eslint": "^7.17.0",
     "jasmine": "^2.6.0",
     "nyc": "^15.1.0",
@@ -132,5 +133,6 @@
     "Greg Magolan <gmagolan@gmail.com>",
     "Livio Brunner <livio.brunner.lb1@gmail.com>",
     "Lorenzo Moreschini <lor.moreschini@gmail.com>"
-  ]
+  ],
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
